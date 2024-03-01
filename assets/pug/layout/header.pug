@@ -1,0 +1,11 @@
+include mixins.pug
+header.header.padding
+    a.logo(href="#")
+        img(src="images/logo1.svg", alt="")
+    nav
+        ul.header__nav.main-nav
+            li: a.main-nav__link(href="#") Преимущества 
+            li: a.main-nav__link(href="#") Видео 
+            li: a.main-nav__link(href="#") Контакты 
+        button.burger 
+            +svg('burger', 30, 9)(class='icon-fill')

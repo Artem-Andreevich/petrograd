@@ -1,0 +1,35 @@
+extends ../layout/head.pug 
+block content
+    main.page
+        include ../block/hero-section.pug
+
+        section.product-section.padding
+
+            .text-wrap 
+                p
+                    span Видео
+                    span Видео
+                    span Видео
+                    span Видео
+                    span Видео
+                p
+                    span Видео
+                    span Видео
+                    span Видео
+                    span Видео
+                    span Видео
+            .product-wrap
+                .product
+                    video(src="images/Video.mp4") 
+                    .product__cta
+                        button.product__btn.product__btn--play
+
+                .product
+                    img(src="images/product.jpg", alt="")
+                    .product__cta
+                        a.product__btn.product__btn--link(href="#") 
+
+        include ../block/form-section.pug
+
+
+        

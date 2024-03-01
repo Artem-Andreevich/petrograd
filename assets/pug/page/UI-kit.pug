@@ -1,0 +1,755 @@
+extends ../layout/head.pug 
+block header
+block content
+    main.page
+
+        section.py-5.bg-white
+            // DROPDOWN MENU
+            .container 
+                div
+                    h1.fs--48-24.bold.mt-5.mb-3 DROPDOWN MENU
+                    p 
+                        | li
+                        br   
+                        |
+                        br
+                        | a.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") О фабрике
+                        br
+                        | ul.dropdown-menu 
+                        br
+                        |
+                        br
+                        |li: a.dropdown-item(href="#") Сайты
+                        br
+                        |li: a.dropdown-item(href="#") Фирменные стили
+                        br
+                        |li: a.dropdown-item(href="#") Иллюстрации
+                        br
+                        |li: a.dropdown-item(href="#") Инфографика
+                        br
+                        |li: a.dropdown-item.active(href="#") Продвижение сайтов
+                div
+                    h1.fs--48-24.bold.mt-5.mb-3 OFFCANVAS BUTTON
+                    |button(type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-offcanvas")
+
+                div
+                    h1.fs--48-24.bold.mt-5.mb-3 MODAL BUTTON
+                    |button(type="button" data-bs-toggle="modal" data-bs-target="#contact-modal")
+
+
+        // SPACING
+        section.py-5.bg-black
+            .container
+                h1.fs--48-24.bold.mt-5.mb-3.color-white SPACING
+                .grid--4-2-2.gap-5.color-white
+                    // MARGIN
+                    div
+                        h1.fs--36-24.bold.mt-5.mb-3.bg-main.color-white.size--content MARGIN
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНЕШНИЕ отступы элемента
+                            span.fw-bold ВО ВСЕ СТОРОНЫ
+                        .bg-accent.m-0
+                            span .m-0
+                        .bg-accent.m-1
+                            span .m-1
+                        .bg-accent.m-2
+                            span .m-2
+                        .bg-accent.m-3
+                            span .m-3
+                        .bg-accent.m-4
+                            span .m-4
+                        .bg-accent.m-5
+                            span .m-5
+
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНЕШНИЕ отступы элемента
+                            span.fw-bold СВЕРХУ И СНИЗУ
+                        .bg-accent.my-0
+                            span .my-0
+                        .bg-accent.my-1
+                            span .my-1
+                        .bg-accent.my-2
+                            span .my-2
+                        .bg-accent.my-3
+                            span .my-3
+                        .bg-accent.my-4
+                            span .my-4
+                        .bg-accent.my-5
+                            span .my-5
+
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНЕШНИЕ отступы элемента
+                            span.fw-bold СЛЕВА И СПРАВА
+                        .bg-accent.mx-0
+                            span .mx-0
+                        .bg-accent.mx-1
+                            span .mx-1
+                        .bg-accent.mx-2
+                            span .mx-2
+                        .bg-accent.mx-3
+                            span .mx-3
+                        .bg-accent.mx-4
+                            span .mx-4
+                        .bg-accent.mx-5
+                            span .mx-5
+   
+                    div
+                        h1.fs--36-24.bold.mt-5.mb-3.bg-main.color-white.size--content MARGIN
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНЕШНИЕ отступы элемента
+                            span.fw-bold СЛЕВА
+                        .bg-accent.ms-0
+                            span .ms-0
+                        .bg-accent.ms-1
+                            span .ms-1
+                        .bg-accent.ms-2
+                            span .ms-2
+                        .bg-accent.ms-3
+                            span .ms-3
+                        .bg-accent.ms-4
+                            span .ms-4
+                        .bg-accent.ms-5
+                            span .ms-5
+
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНЕШНИЕ отступы элемента
+                            span.fw-bold СПРАВА
+                        .bg-accent.me-0
+                            span .me-0
+                        .bg-accent.me-1
+                            span .me-1
+                        .bg-accent.me-2
+                            span .me-2
+                        .bg-accent.me-3
+                            span .me-3
+                        .bg-accent.me-4
+                            span .me-4
+                        .bg-accent.me-5
+                            span .me-5
+
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНЕШНИЕ отступы элемента
+                            span.fw-bold СВЕРХУ
+                        .bg-accent.mt-0
+                            span .mt-0
+                        .bg-accent.mt-1
+                            span .mt-1
+                        .bg-accent.mt-2
+                            span .mt-2
+                        .bg-accent.mt-3
+                            span .mt-3
+                        .bg-accent.mt-4
+                            span .mt-4
+                        .bg-accent.mt-5
+                            span .mt-5
+
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНЕШНИЕ отступы элемента
+                            span.fw-bold СНИЗУ
+                        .bg-accent.mb-0
+                            span .mb-0
+                        .bg-accent.mb-1
+                            span .mb-1
+                        .bg-accent.mb-2
+                            span .mb-2
+                        .bg-accent.mb-3
+                            span .mb-3
+                        .bg-accent.mb-4
+                            span .mb-4
+                        .bg-accent.mb-5
+                            span .mb-5
+
+                    // PADDING
+                    div
+                        h1.fs--36-24.bold.mt-5.mb-3.bg-main.color-white.size--content PADDING
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНУТРЕННИЕ отступы элемента
+                            span.fw-bold ВО ВСЕ СТОРОНЫ
+                        .bg-accent.p-0.mb-2.size--content
+                            span .p-0
+                        .bg-accent.p-1.mb-2.size--content
+                            span .p-1
+                        .bg-accent.p-2.mb-2.size--content
+                            span .p-2
+                        .bg-accent.p-3.mb-2.size--content
+                            span .p-3
+                        .bg-accent.p-4.mb-2.size--content
+                            span .p-4
+                        .bg-accent.p-5.mb-2.size--content
+                            span .p-5
+
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНУТРЕННИЕ отступы элемента
+                            span.fw-bold СВЕРХУ И СНИЗУ
+                        .bg-accent.py-0.mb-2.size--content
+                            span .py-0
+                        .bg-accent.py-1.mb-2.size--content
+                            span .py-1
+                        .bg-accent.py-2.mb-2.size--content
+                            span .py-2
+                        .bg-accent.py-3.mb-2.size--content
+                            span .py-3
+                        .bg-accent.py-4.mb-2.size--content
+                            span .py-4
+                        .bg-accent.py-5.mb-2.size--content
+                            span .py-5
+
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНУТРЕННИЕ отступы элемента
+                            span.fw-bold СЛЕВА И СПРАВА
+                        .bg-accent.px-0.mb-2.size--content
+                            span .px-0
+                        .bg-accent.px-1.mb-2.size--content
+                            span .px-1
+                        .bg-accent.px-2.mb-2.size--content
+                            span .px-2
+                        .bg-accent.px-3.mb-2.size--content
+                            span .px-3
+                        .bg-accent.px-4.mb-2.size--content
+                            span .px-4
+                        .bg-accent.px-5.mb-2.size--content
+                            span .px-5
+
+                    div
+                        h1.fs--36-24.bold.mt-5.mb-3.bg-main.color-white.size--content PADDING
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНУТРЕННИЕ отступы элемента
+                            span.fw-bold СВЕРХУ
+                        .bg-accent.pt-0.mb-2.size--content
+                            span .pt-0
+                        .bg-accent.pt-1.mb-2.size--content
+                            span .pt-1
+                        .bg-accent.pt-2.mb-2.size--content
+                            span .pt-2
+                        .bg-accent.pt-3.mb-2.size--content
+                            span .pt-3
+                        .bg-accent.pt-4.mb-2.size--content
+                            span .pt-4
+                        .bg-accent.pt-5.mb-2.size--content
+                            span .pt-5
+
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНУТРЕННИЕ отступы элемента
+                            span.fw-bold СНИЗУ
+                        .bg-accent.pb-0.mb-2.size--content
+                            span .pb-0
+                        .bg-accent.pb-1.mb-2.size--content
+                            span .pb-1
+                        .bg-accent.pb-2.mb-2.size--content
+                            span .pb-2
+                        .bg-accent.pb-3.mb-2.size--content
+                            span .pb-3
+                        .bg-accent.pb-4.mb-2.size--content
+                            span .pb-4
+                        .bg-accent.pb-5.mb-2.size--content
+                            span .pb-5
+
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНУТРЕННИЕ отступы элемента
+                            span.fw-bold СЛЕВА
+                        .bg-accent.ps-0.mb-2.size--content
+                            span .ps-0
+                        .bg-accent.ps-1.mb-2.size--content
+                            span .ps-1
+                        .bg-accent.ps-2.mb-2.size--content
+                            span .ps-2
+                        .bg-accent.ps-3.mb-2.size--content
+                            span .ps-3
+                        .bg-accent.ps-4.mb-2.size--content
+                            span .ps-4
+                        .bg-accent.ps-5.mb-2.size--content
+                            span .ps-5
+
+                        .mt-5.mb-3
+                            span.d-flex.fw-normal ВНУТРЕННИЕ отступы элемента
+                            span.fw-bold СПРАВА
+                        .bg-accent.pe-0.mb-2.size--content
+                            span .pe-0
+                        .bg-accent.pe-1.mb-2.size--content
+                            span .pe-1
+                        .bg-accent.pe-2.mb-2.size--content
+                            span .pe-2
+                        .bg-accent.pe-3.mb-2.size--content
+                            span .pe-3
+                        .bg-accent.pe-4.mb-2.size--content
+                            span .pe-4
+                        .bg-accent.pe-5.mb-2.size--content
+                            span .pe-5
+
+        // FONTS
+        section.py-5.bg-light
+            .container
+                .grid--3-2-1.gap-5
+                    // FONT SIZE
+                    div
+                        h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white FONT SIZE
+                        .fs--72-32 .fs--72-32
+                        .fs--72-24 .fs--72-24
+                        .fs--48-24 .fs--48-24
+                        .fs--48-sm-18 .fs--48-sm-18
+                        .fs--48-xs-18 .fs--48-xs-18
+                        .fs--36-24 .fs--36-24
+                        .fs--36-sm-18 .fs--36-sm-18
+                        .fs--32-24 .fs--32-24
+                        .fs--32-sm-18 .fs--32-sm-18
+                        .fs--32-sm-16 .fs--32-sm-16
+                        .fs--24-18 .fs--24-18
+                        .fs--24-lg-16 .fs--24-lg-16
+                        .fs--24-sm-16 .fs--24-sm-16
+                        .fs--18-16 .fs--18-16
+                        .fs--18-14 .fs--18-14
+                        .fs--16-14 .fs--16-14
+                        .fs--16-sm-12 .fs--16-sm-12
+                        .fs--16-xs-12 .fs--16-xs-12
+                        .fs--16-sm-10 .fs--16-sm-10
+                        .fs--16-xs-10 .fs--16-xs-10
+                        .fs--14-12 .fs--14-12
+                        .fs--14-sm-10 .fs--14-sm-10
+                        .fs--14-xs-10 .fs--14-xs-10
+                    // FONT COLOR
+                    div
+                        h1.fs--48-24.fw-bold.mt-5.mb-3.bg-accent.px-2.color-white FONT COLOR
+                        .fs--24-18.fw-bold.color-main .color-main
+                        .fs--24-18.fw-bold.color-accent .color-accent
+                        .fs--24-18.fw-bold.color-second .color-second
+                        .fs--24-18.fw-bold.color-light .color-light
+                        .fs--24-18.fw-bold.color-white .color-white
+                        .fs--24-18.fw-bold.color-black .color-black
+                        .fs--24-18.fw-bold.color-dark .color-dark
+                        // FONT WEIGHT
+                        h1.fs--48-24.fw-bold.mt-5.mb-3.bg-accent.px-2.color-white FONT WEIGHT
+                        .fs--24-18.fw-bold.color-main .fw-bold
+                        .fs--24-18.fw-normal.color-main .fw-normal
+                        // LINE HEIGHT
+                        h1.fs--48-24.fw-bold.mt-5.mb-3.bg-accent.px-2.color-white LINE HEIGHT
+                        .fs--24-18.lh-100.fw-bold .lh-100
+                        .fs--24-18.lh-124.fw-bold .lh-125
+                        .fs--24-18.lh-140.fw-bold .lh-140
+                        .fs--24-18.lh-175.fw-bold .lh-175
+
+                    // TEXT PREVIEW
+                    div
+                        h1.fs--48-24.fw-bold.mt-5.mb-3.bg-accent.px-2.color-white TEXT PREVIEW
+                        .d-flex.flex-column.gap-4
+                            .d-flex.flex-column.gap-2
+                                h2.fs--18-16.fw-bold .text-preview .text-line-1
+                                .text-preview.text-line-1 Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+
+                            .d-flex.flex-column.gap-2
+                                h2.fs--18-16.fw-bold .text-preview .text-line-2
+                                .text-preview.text-line-2 Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+
+                            .d-flex.flex-column.gap-2
+                                h2.fs--18-16.fw-bold .text-preview .text-line-3
+                                .text-preview.text-line-3 Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+
+                            .d-flex.flex-column.gap-2
+                                h2.fs--18-16.fw-bold .text-preview .text-line-2 .text-preview-open<br>(click to open)
+                                .text-preview.text-line-2.text-preview-open Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+
+                            .d-flex.flex-column.gap-2
+                                h2.fs--18-16.fw-bold .text-preview .text-line-2 .text--is-clamped<br>(cursor: help)
+                                .text-preview.text-line-2.text--is-clamped Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб  Оперативная память ADATA  AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA  AD4U266616G19-SGN DDR4 16Гб
+
+                        h1.fs--48-24.fw-bold.mt-5.mb-3.bg-accent.px-2.color-white LINK UNDERLINE
+                        .d-flex.flex-column.gap-2
+                            a.fs--24-18.link--solid(href="#") .link--solid
+                            a.fs--24-18.link--dotted(href="#") .link--dotted
+
+        // BACKGROUND , OUTLINE , RADIUS
+        section.py-5
+            .container
+                .grid--3-2-1.gap-5
+                    // BACKGROUND
+                    div
+                        h1.fs--48-24.bold.mt-5.mb-3 BACKGROUND COLOR
+                        .bg-main.p-4.fw-bold .bg-main
+                        .bg-accent.p-4.fw-bold .bg-accent
+                        .bg-second.p-4.fw-bold .bg-second
+                        .bg-light.p-4.fw-bold .bg-light
+                        .bg-white.p-4.fw-bold .bg-white
+                        .bg-black.p-4.fw-bold.color-white .bg-black
+                        .bg-dark.p-4.fw-bold.color-white .bg-dark
+                    // OUTLINE
+                    div
+                        h1.fs--48-24.bold.mt-5.mb-3 BORDER COLOR
+                        .outline-main.p-4.fw-bold.mb-3 .outline-main
+                        .outline-accent.p-4.fw-bold.mb-3 .outline-accent
+                        .outline-second.p-4.fw-bold.mb-3 .outline-second
+                        .outline-light.p-4.fw-bold.mb-3 .outline-light
+                        .outline-white.p-4.fw-bold.mb-3 .outline-white
+                        .outline-black.p-4.fw-bold.mb-3 .outline-black
+                        .outline-dark.p-4.fw-bold.mb-3 .outline-dark
+                    // RADIUS
+                    div
+                        h1.fs--48-24.bold.mt-5.mb-3 RADIUS COLOR
+                        .radius-16.outline-main.p-4.fw-bold.mb-3 .radius-16
+                        .radius-18.outline-main.p-4.fw-bold.mb-3 .radius-18
+                        .radius-24.outline-main.p-4.fw-bold.mb-3 .radius-24
+
+        // HOVER
+        section.py-5.bg-light
+            .container
+                .grid--3-2-1.gap-5
+                    // HOVER
+                    div
+                        h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white HOVER
+                        .fs--24-18.fw-bold.hover .hover 
+                            span.fw-normal  (cursor: pointer)
+                        .fs--24-18.fw-bold.hover-icon .hover-icon
+                            +svg('location')(class='icon size color-main')
+                        .fs--24-18.fw-bold.hover-opacity .hover-opacity
+                            span.fw-normal  (opacity: 0.7)
+                        
+                        // HOVER COLOR
+                        h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white HOVER COLOR
+                        .fs--24-18.fw-bold.hover-main .hover-main
+                        .fs--24-18.fw-bold.hover-accent .hover-accent
+                        .fs--24-18.fw-bold.hover-second .hover-second
+                        .fs--24-18.fw-bold.hover-light .hover-light
+                        .fs--24-18.fw-bold.hover-white .hover-white
+                        .fs--24-18.fw-bold.hover-black.color-second .hover-black
+                        .fs--24-18.fw-bold.hover-dark.color-second .hover-dark
+
+                        // HOVER SHADOW
+                        h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white HOVER SHADOW
+                        .hover-shadow-main.p-4.fw-bold.mb-3 .hover-shadow-main
+                        .hover-shadow-accent.p-4.fw-bold.mb-3 .hover-shadow-accent
+                        .hover-shadow-dark.p-4.fw-bold.mb-3 .hover-shadow-dark
+                        .hover-shadow-second.p-4.fw-bold.mb-3 .hover-shadow-second
+
+                    // HOVER BACKGROUND COLOR
+                    div
+                        h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white HOVER BACKGROUND
+                        .hover-bg-main.p-4.fw-bold .hover-bg-main
+                        .hover-bg-accent.p-4.fw-bold .hover-bg-accent
+                        .hover-bg-second.p-4.fw-bold .hover-bg-second
+                        .hover-bg-light.p-4.fw-bold .hover-bg-light
+                        .hover-bg-white.p-4.fw-bold .hover-bg-white
+                        .hover-bg-black.p-4.fw-bold .hover-bg-black
+                        .hover-bg-dark.p-4.fw-bold .hover-bg-dark
+
+                        // HOVER ANIMATION
+                        h1.fs--48-24.bold.mt-5.mb-3 HOVER ANIMATION
+                        .hover-anim-up.p-4.fw-bold.mb-3.bg-accent.color-white .hover-anim-up
+                        .hover-anim-down.p-4.fw-bold.mb-3.bg-accent.color-white .hover-anim-down
+                        .hover-anim-right.p-4.fw-bold.mb-3.bg-accent.color-white .hover-anim-right
+                        .hover-anim-left.p-4.fw-bold.mb-3.bg-accent.color-white .hover-anim-left
+
+                    // HOVER OUTLINE COLOR
+                    div
+                        h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white HOVER OUTLINE
+                        .hover-outline-main.p-4.fw-bold.mb-3 .hover-outline-main
+                        .hover-outline-accent.p-4.fw-bold.mb-3 .hover-outline-accent
+                        .hover-outline-second.p-4.fw-bold.mb-3 .hover-outline-second
+                        .hover-outline-light.p-4.fw-bold.mb-3 .hover-outline-light
+                        .hover-outline-white.p-4.fw-bold.mb-3 .hover-outline-white
+                        .hover-outline-black.p-4.fw-bold.mb-3 .hover-outline-black
+                        .hover-outline-dark.p-4.fw-bold.mb-3 .hover-outline-dark
+
+        // SIZE
+        section.py-5.bg-black
+            .container
+                h1.fs--48-24.bold.mt-5.mb-3.color-white SIZE
+                // SIZE
+                .grid--3-2-1.gap-4.fw-bold.color-white
+                    div
+                        .size--60-50.bg-main
+                        span .size--60-50
+                    div
+                        .size--60-40.bg-main
+                        span .size--60-40
+                    div
+                        .size--50-40.bg-main
+                        span .size--50-40
+                    div
+                        .size--50-30.bg-accent
+                        span .size--50-30
+                    div
+                        .size--40-30.bg-accent
+                        span .size--40-30
+                    div
+                        .size--30-25.bg-accent
+                        span .size--30-25
+                    
+                    .size.bg-main.color-white.p-2 .size
+                    .size--content.bg-main.color-white.p-2 .size--content
+                    .size--max.bg-main.color-white.p-2 .size--max
+                    .size--min.bg-main.color-white.p-2 .size--min
+
+                h1.fs--48-24.bold.mt-5.mb-3.color-white ICON ROTATION
+                //  ICON ROTATION
+                .grid--3-2-1.gap-4.fw-bold.color-white
+                    div
+                        +svg('location')(class='icon icon-rotate-90 color-accent')
+                        p .icon-rotate-90
+                    div
+                        +svg('location')(class='icon icon-rotate-180 color-accent')
+                        p .icon-rotate-180
+                    div
+                        +svg('location')(class='icon icon-rotate-270 color-accent')
+                        p .icon-rotate-270
+
+        // FORM , CHECKBOX , RADIO
+        section.py-5
+            .container
+                .grid--2-1.gap-4
+                    // FORM
+                    div
+                        h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white FORM
+                        form.form.d-flex.flex-column.gap-3(action="")
+                            .form-floating
+                                input.form-control.radius-main.outline-dark.hover-outline-accent.ease(type='text', placeholder='Логин')
+                                label Логин
+                            .form-floating
+                                input.form-control.radius-main.outline-dark.hover-outline-accent.ease(type='text', placeholder='Пароль')
+                                label Пароль
+                            button.bg-main.hover.hover-outline-main.hover-shadow-main.radius-main
+                                span.fs--16-14.color-white.bold Войти
+                            
+
+                    // CHECKBOX - RADIO BUTTON
+                    div
+                        h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white CHECKBOX - RADIO BUTTON
+                        form.d-flex.flex-column.gap-2
+                            label.page__checkbox
+                                input(type="checkbox")
+                                svg(xmlns='http://www.w3.org/2000/svg', width='20px', height='20px', viewBox='0 0 0.253167 0.253167')
+                                    rect(fill='#ED4300', width='0.253167', height='0.253167', rx='0.0506327', ry='0.0506327')
+                                    polyline(fill='none', stroke='white', stroke-width='0.0253182', stroke-linecap='round', stroke-linejoin='round', points='0.177213,0.0885956 0.113921,0.151887 0.0759509,0.113914 ')
+                                span Ddwqdwqdwq dwq dw dwq&nbsp;
+                                    a.link--solid.hover-main(href="#") Политика
+                                    
+                            label.page__radio
+                                input(type="radio" name="radio" value="25" checked)
+                                svg(xmlns='http://www.w3.org/2000/svg', width='20px', height='20px', viewBox='0 0 0.253167 0.253167')
+                                    rect(fill='#ED4300', width='0.253167', height='0.253167', rx='0.126584', ry='0.126584')
+                                    rect(fill='white', x='0.0632923', y='0.0632921', width='0.126584', height='0.126584', rx='0.126584', ry='0.126584')
+                                span Radio
+                            label.page__radio
+                                input(type="radio" name="radio" value="25")
+                                svg(xmlns='http://www.w3.org/2000/svg', width='20px', height='20px', viewBox='0 0 0.253167 0.253167')
+                                    rect(fill='#ED4300', width='0.253167', height='0.253167', rx='0.126584', ry='0.126584')
+                                    rect(fill='white', x='0.0632923', y='0.0632921', width='0.126584', height='0.126584', rx='0.126584', ry='0.126584')
+                                span Radio
+
+        // BREADCRUMBS , PAGINATION , SEARCH-FORM
+        section.py-5
+            .container
+                // BREADCRUMBS
+                h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white.size--content BREADCRUMBS
+                include ../block/bread.pug
+
+                // PAGINATION
+                h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white.size--content PAGINATION
+                include ../block/pag.pug
+
+                // SEARCH-FORM
+                h1.fs--48-24.bold.mt-5.mb-3.bg-accent.px-2.color-white.size--content SEARCH-FORM
+                form.search-form(action='/search/' method='GET')
+                    input.bg-second.hover-outline-main.hover-bg-white(type="text" name="q" placeholder="Поиск оборудования")
+                    button.hover.hover-main(type="submit")
+                        +svg('loop', 28)(class='icon size--30-20')
+
+        // GRID
+        section.py-5.bg-black
+            .container
+                // GRID
+                h1.fs--48-24.bold.mt-5.mb-3.bg-main.p-4.color-white.size--content GRID
+
+
+
+                // +1199 / 1199-
+                h1.fs--36-24.bold.mt-5.mb-3.bg-main.color-white.size--content + 1199px / 1199px -
+
+                // .grid--2-1
+                h1.fs--48-24.bold.mt-5.mb-3.color-white .grid--2-1
+                .grid--2-1.gap-3
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT 
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                // .grid--left
+                h1.fs--48-24.bold.mt-5.mb-3.color-white .grid--left
+                .grid--left.gap-3
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                
+                // .grid--right
+                h1.fs--48-24.bold.mt-5.mb-3.color-white .grid--right
+                .grid--right.gap-3
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+
+
+
+                // +1399 / 1399 - 991 / 991-
+                h1.fs--36-24.bold.mt-5.mb-3.bg-main.color-white.size--content + 1399px / 1399px -- 991px / 991px -
+
+                // .grid--4-2-2
+                h1.fs--48-24.bold.mt-5.mb-3.color-white .grid--4-2-2
+                .grid--4-2-2.gap-3
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                // .grid--4-2-1
+                h1.fs--48-24.bold.mt-5.mb-3.color-white .grid--4-2-1
+                .grid--4-2-1.gap-3
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                // .grid--3-3-2
+                h1.fs--48-24.bold.mt-5.mb-3.color-white .grid--3-3-2
+                .grid--3-3-2.gap-3
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                // .grid--3-2-2
+                h1.fs--48-24.bold.mt-5.mb-3.color-white .grid--3-2-2
+                .grid--3-2-2.gap-3
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                // .grid--3-2-1
+                h1.fs--48-24.bold.mt-5.mb-3.color-white .grid--3-2-1
+                .grid--3-2-1.gap-3
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+
+                // .grid--auto
+                h1.fs--36-24.bold.mt-5.mb-3.color-white.bg-main.size--content .grid--auto
+                .grid--auto.gap-3
+                    .bg-accent.color-white.flex-center.fw-bold min 300px
+                    .bg-accent.color-white.flex-center.fw-bold max 100%
+                    .bg-accent.color-white.flex-center.fw-bold min 300px
+                    .bg-accent.color-white.flex-center.fw-bold max 100%
+
+
+
+                // .grid-out
+                h1.fs--36-24.bold.mt-5.mb-3.bg-main.color-white.size--content .grid-out
+                .grid--3-2-1.gap-3
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .bg-accent.color-white.flex-center.fw-bold CONTENT
+                    .grid-out.bg-accent.color-white.flex-center.fw-bold .grid-out
+
+                // GAP
+                h1.fs--36-24.bold.mt-5.mb-3.bg-main.color-white.size--content GAP
+                .grid--3-2-1.gap-3
+                    div.color-white
+                        span.d-flex.fw-normal Отступы между элементами ВНУТРИ GRID 
+                        span.fw-bold ВО ВСЕ СТОРОНЫ
+
+                        .bg-main.p-1.fw-bold.my-3 .grid--3-2-1 .gap-3
+                        .grid--3-2-1.gap-3
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+
+                    div.color-white
+                        span.d-flex.fw-normal Отступы между элементами ВНУТРИ GRID 
+                        span.fw-bold ТОЛЬКО ГОРИЗОНТАЛЬНЫЕ
+
+                        .bg-main.p-1.fw-bold.my-3 .grid--3-2-1 .row-gap-2
+                        .grid--3-2-1.row-gap-2
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                    div.color-white
+                        span.d-flex.fw-normal Отступы между элементами ВНУТРИ GRID 
+                        span.fw-bold ТОЛЬКО ВЕРТИКАЛЬНЫЕ
+
+                        .bg-main.p-1.fw-bold.my-3 .grid--3-2-1 .column-gap-5
+                        .grid--3-2-1.column-gap-5
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+
+                            .bg-accent.m-0
+                                .bg-accent.color-white.flex-center.fw-bold CONTENT
+                span.d-flex.color-white.fw-bold.my-3 gap, column-gap, row-gap может быть разного размера .gap-{ 0 | 1 | 2 | 3 | 4 | 5 }
+                 
+        // PAGE CONTENT
+        section.py-5
+            .container
+                // PAGE CONTENT
+                h1.fs--48-24.bold.mt-5.mb-3.bg-main.p-4.color-white.size--content PAGE CONTENT
+
+                .page__content 
+                    h1 Заголовок 1
+                    h2 Заголовок 1
+                    h3 Заголовок 3
+                    a.link--solid(href="#") Ссылка на страницу 
+                    a.link--dotted(href="#") Ссылка на страницу 
+                    p Параграф Оперативная память ADATA AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA AD4U266616G19-SGN DDR4 16Гб Оперативная память ADATA AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA AD4U266616G19-SGN DDR4 16Гб Оперативная память ADATA AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA AD4U266616G19-SGN DDR4
+                    .grid--auto
+                        ul 
+                            li Параграф Оперативная память
+                            li Параграф Оперативная память
+                            li: p Параграф Оперативная память 
+                            li
+                                b Параграф Оперативная память 
+                                p Параграф Оперативная память 
+                            li: a(href="#") Параграф Оперативная память 
+
+                        ol 
+                            li Параграф Оперативная память
+                            li Параграф Оперативная память
+                            li: p Параграф Оперативная память 
+                            li: b Параграф Оперативная память 
+                            li: a(href="#") Параграф Оперативная память 
+                    .grid--auto.mt-5.gap-4
+                        div
+                            h2 Параграф Оперативная память
+                            p.mt-3 Параграф Оперативная память ADATA AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA AD4U266616G19-SGN DDR4 16Гб Оперативная память ADATA AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA AD4U266616G19-SGN DDR4 16Гб Оперативная память ADATA AD4U266616G19-SGN DDR4 16ГбОперативная память ADATA AD4U266616G19-SGN DDR4                        
+                            ol.mt-4
+                                li Параграф Оперативная память
+                                li Параграф Оперативная память
+                                li: p Параграф Оперативная память 
+                                li: b Параграф Оперативная память 
+                                li: a(href="#") Параграф Оперативная память 
+                        div
+                            img(src="images/c-map.jpg", alt="")
+
+block footer
