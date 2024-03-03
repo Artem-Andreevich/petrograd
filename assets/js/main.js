@@ -24,10 +24,10 @@ $(function (){
 			event.preventDefault()
 			submitBtn.setAttribute('disabled', 'true')
 		} else {
-			event.preventDefault()
 			submitBtn.removeAttribute('disabled')
 			event.target.reset()
 			succsesMes.classList.remove('hidden')
+			event.preventDefault()
 		}
 	})
 	/* END FORM VALIDATION */
@@ -35,63 +35,99 @@ $(function (){
 
 
 
+	const swiper = new Swiper('.my-swiper', {
 
-	const textTl = gsap.timeline()
-	textTl.to('.text-wrap p:first-child', {
-		scrollTrigger: {
-			scrub: 1,
-			start: '+=100',
-			end: '+=4500',
-		},
-		x: '+=1550'
-	})
-	textTl.to('.text-wrap p:last-child', {
-		scrollTrigger: {
-			scrub: 1,
-			start: '+=100',
-			end: '+=4500',
-		},
-		x: '-=1550'
-	})
+		direction: "vertical",
+		// direction: "horizontal",
 
+		// autoHeight: true,
 
-	const prodSection = gsap.timeline({
+		// pagination: {
+		// 	el: ".swiper-pagination",
+		// 	clickable: true,
+		// },
 
-		scrollTrigger: {
-			trigger: ".product-section",
-			pin: true,
-			start: "top top",
-			scrub: 1,
-			// onEnter: () => { console.log('enter')}
-		}
-	})
-
-	prodSection.add(gsap.fromTo('.product-wrap', {
-
-		scrollTrigger: {
-			trigger: ".product-section",
-			pin: true,
-			scrub: 1,
-			start: "top center",
+		mousewheel: {
+			enabled: true,
+			noMousewheelClass: true,
 		},
 
-		y: '300',
-		rotate: '60'
-	},
-	{
-		y: '0',
-		rotate: '0'
-	}
-	))
-	// prodSection.add(gsap.fromTo('.product', 
-	// 	{
-	// 		y: '0',
+	  });
 
+	  var swiper2 = new Swiper('.my-swiper2', {
+		direction: "vertical",
+		// direction: "horizontal",
+		// autoHeight: true,
+
+		// pagination: {
+		//   el: ".swiper-pagination",
+		//   clickable: true,
+		// },
+
+		nested: true,
+
+		// effect: 'fade',
+		// fadeEffect: {
+		// 	crossFade: true
+		// },
+
+		mousewheel: {
+			enabled: true,
+			noMousewheelClass: true,
+		},
+
+	  });
+
+
+
+
+
+	// const textTl = gsap.timeline()
+	// textTl.to('.text-wrap p:first-child', {
+	// 	scrollTrigger: {
+	// 		scrub: 1,
+	// 		start: '+=100',
+	// 		end: '+=4500',
 	// 	},
-	// 	{
-	// 		y: '-1000',
+	// 	x: '+=1550'
+	// })
+	// textTl.to('.text-wrap p:last-child', {
+	// 	scrollTrigger: {
+	// 		scrub: 1,
+	// 		start: '+=100',
+	// 		end: '+=4500',
+	// 	},
+	// 	x: '-=1550'
+	// })
 
+
+	// const prodSection = gsap.timeline({
+
+	// 	scrollTrigger: {
+	// 		trigger: ".product-section",
+	// 		pin: true,
+	// 		start: "top top",
+	// 		scrub: 1,
+	// 		// onEnter: () => { console.log('enter')}
 	// 	}
+	// })
+
+	// prodSection.add(gsap.fromTo('.product-wrap', {
+
+	// 	scrollTrigger: {
+	// 		trigger: ".product-section",
+	// 		pin: true,
+	// 		scrub: 1,
+	// 		start: "top center",
+	// 	},
+
+	// 	y: '300',
+	// 	rotate: '60'
+	// },
+	// {
+	// 	y: '0',
+	// 	rotate: '0'
+	// }
 	// ))
 
 

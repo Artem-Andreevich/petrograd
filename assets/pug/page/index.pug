@@ -1,35 +1,75 @@
 extends ../layout/head.pug 
 block content
     main.page
-        include ../block/hero-section.pug
 
-        section.product-section.padding
+        .swiper.my-swiper
+            .swiper-wrapper
 
-            .text-wrap 
-                p
-                    span Видео
-                    span Видео
-                    span Видео
-                    span Видео
-                    span Видео
-                p
-                    span Видео
-                    span Видео
-                    span Видео
-                    span Видео
-                    span Видео
-            .product-wrap
-                .product
-                    video(src="images/Video.mp4") 
-                    .product__cta
-                        button.product__btn.product__btn--play
+                .swiper-slide
+                    include ../block/hero-section.pug
 
-                .product
-                    img(src="images/product.jpg", alt="")
-                    .product__cta
-                        a.product__btn.product__btn--link(href="#") 
+                .swiper-slide.swiper-no-mousewheel
 
-        include ../block/form-section.pug
+                        section.product-section.padding
+                            .text-wrap 
+                                p
+                                    span Видео
+                                    span Видео
+                                    span Видео
+                                    span Видео
+                                    span Видео
+                                p
+                                    span Видео
+                                    span Видео
+                                    span Видео
+                                    span Видео
+                                    span Видео
+                            .swiper.my-swiper2
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        //- .text-wrap 
+                                            p
+                                                span Видео
+                                                span Видео
+                                                span Видео
+                                                span Видео
+                                                span Видео
+                                            p
+                                                span Видео
+                                                span Видео
+                                                span Видео
+                                                span Видео
+                                                span Видео
+                                        .product-wrap
+                                            .product
+                                                video(src="images/Video.mp4") 
+                                                .product__cta
+                                                    button.product__btn.product__btn--play
 
+                                    .swiper-slide
+                                        //- .text-wrap 
+                                            p
+                                                span Велосипед
+                                                span Велосипед
+                                                span Велосипед
+                                                span Велосипед
+                                                span Велосипед
+                                            p
+                                                span Велосипед
+                                                span Велосипед
+                                                span Велосипед
+                                                span Велосипед
+                                                span Велосипед
+                                                
+                                        .product-wrap
+                                            .product
+                                                img(src="images/product.jpg", alt="")
+                                                .product__cta
+                                                    a.product__btn.product__btn--link(href="#") 
+
+                .swiper-slide
+                    include ../block/form-section.pug
+
+            //- .swiper-pagination
 
         

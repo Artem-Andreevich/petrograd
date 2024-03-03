@@ -7,6 +7,7 @@ html(lang="ru")
         link(rel='preconnect', href='https://fonts.googleapis.com')
         link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
         link(href='css/bootstrap.min.css', rel='stylesheet')
+        link(href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', rel='stylesheet')
         link(href='css/styles.min.css', rel='stylesheet')
         link(href='css/media.min.css', rel='stylesheet')
         link(rel="icon" href="fic.svg" type="image/svg+xml")
@@ -14,8 +15,9 @@ html(lang="ru")
         
         script(src='js/jquery.min.js')
         script(src='js/jquery.inputmask.bundle.min.js')
-        script(src='js/gsap/gsap.min.js')
-        script(src='js/gsap/ScrollTrigger.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
+        //- script(src='js/gsap/gsap.min.js')
+        //- script(src='js/gsap/ScrollTrigger.min.js')
         script(src='js/main.js')
     body.inner-page
         include svg.pug
@@ -27,4 +29,4 @@ html(lang="ru")
                 include header.pug
             block content 
             block footer
-                include footer.pug
+                //- include footer.pug
