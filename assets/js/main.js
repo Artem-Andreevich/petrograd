@@ -52,7 +52,6 @@ $(function (){
 	const swiper = new Swiper('.my-swiper', {
 		direction: "vertical",
 		speed: 600,
-		nested: true,
 
 		mousewheel: {
 			enabled: true,
