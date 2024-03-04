@@ -52,6 +52,8 @@ $(function (){
 	const swiper = new Swiper('.my-swiper', {
 		direction: "vertical",
 		speed: 600,
+		mousewheelControl: true,
+		simulateTouch: false,
 
 		mousewheel: {
 			enabled: true,
@@ -99,11 +101,12 @@ $(function (){
 		function isVsible( entries ) {
 			entries.forEach( entry => {
 
-				if(entry.isIntersecting) {
-
-					document.querySelector('header').classList.add('header--white')
+				if(entry.isIntersecting && window.innerWidth >= 991) {
 					prodVideo?.play()
+				} 
 
+				if(entry.isIntersecting) {
+					document.querySelector('header').classList.add('header--white')
 				} else {
 					document.querySelector('header').classList.remove('header--white')
 				}
