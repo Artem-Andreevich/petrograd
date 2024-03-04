@@ -77,6 +77,8 @@ $(function (){
 			},
 		},
 		nested: true,
+		mousewheelControl: true,
+		simulateTouch: false,
 		mousewheel: {
 			enabled: true,
 			noMousewheelClass: true,
