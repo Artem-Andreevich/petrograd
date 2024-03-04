@@ -29,6 +29,7 @@
 
 @media (max-width: 1199px) and (min-width: 0px) {
     :root {
+        --fs-100-40: clamp(40px, 5.5vw, 100px);
         --fs-72-32: 2.25rem;
         --fs-48-24: 2rem;
         --fs-24-18: 1.125rem;
@@ -54,9 +55,18 @@
         --fs-72-32: 2rem;
         --fs-48-24: 1.5rem;
         --hero-spacer: 140px;
+        --fs-100-40: clamp(40px, 4.5vw, 100px);
     }
-    .hero-section { flex-direction: column;}
-    .form-section {padding: 160px 0;}
+    .hero-section { flex-direction: column; align-items: center;}
+    .hero-section::after {width: 100%; height: 30%; bottom: 0; top: auto; clip-path: polygon(0% 30%, 100% 45%, 100% 100%, 0% 100%);}
+    .hero-section__text {align-items: center; padding: 30px 0; h1 { margin-bottom: 30px;}}
+    .hero-section__pic {position: static; width: 100%; height: 100%; max-width: 500px; margin-left: -20%;}
+
+    .product-section { padding: 0 var(--page-padding);}
+    .product-section .text-wrap { display: flex; flex-direction: column; justify-content: space-between; height: calc(100% - var(--header-height)); transform: none; top: var(--header-height); line-height: 100%;}
+    .product {max-height: calc(100% - var(--header-height) - 300px);}
+    .product__cta { right: 50%; width: 100px; height: 100px;}
+
 }
 
 @media (max-width: 767px) and (min-width: 0px) {
@@ -87,11 +97,6 @@
     .logo img {max-height: 30px;}
     .burger {display: block;}
     .footer { flex-direction: column; gap: 12px; padding: 15px;}
-
-    .hero-section { align-items: center; padding: 90px 0 30px 0;}
-    .hero-section::after {width: 100%; height: 30%; bottom: 0; top: auto; clip-path: polygon(0% 30%, 100% 45%, 100% 100%, 0% 100%);}
-    .hero-section__text {align-items: center; h1 { margin-bottom: 30px;}}
-    .hero-section__pic {position: static; max-width: 500px; margin-left: -20%;}
 
     .form-section {gap: 40px; .page__subtitle {text-align: center;}}
 

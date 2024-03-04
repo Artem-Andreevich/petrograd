@@ -57,7 +57,7 @@
   --size-40-30: 40px;
   --size-30-25: 30px;
   --wrapper-gap: 60px;
-  --page-padding: 240px;
+  --page-padding: clamp(240px, 15vw, 450px);
   --header-height: 86px;
   --hero-spacer: 184px;
   --border-raduis-24: 24px;
@@ -196,6 +196,9 @@ main {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   flex: 0 0 auto;
 }
 
@@ -994,6 +997,27 @@ footer {
   display: flex;
   align-items: center;
 }
+.header .logo img:last-child {
+  display: none;
+}
+.header--white .logo img:first-child {
+  display: none;
+}
+.header--white .logo img:last-child {
+  display: block;
+}
+.header--white .main-nav__link {
+  color: #fff;
+}
+@media (hover: hover) {
+  .header--white .main-nav__link:hover {
+    color: var(--accent-color);
+    background: #fff;
+  }
+}
+.header--white .burger {
+  color: #fff;
+}
 
 .main-nav__link {
   display: block;
@@ -1017,6 +1041,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 30px 0;
   color: var(--second-light-color);
   font-size: var(--fs-20-14);
@@ -1240,8 +1265,9 @@ footer {
   position: relative;
   z-index: 1;
   display: flex;
+  align-items: center;
+  height: 100%;
   padding-top: var(--header-height);
-  padding-bottom: 30px;
   background: var(--second-color);
 }
 .hero-section::after {
@@ -1262,7 +1288,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: calc(var(--hero-spacer) - var(--header-height)) 0 var(--hero-spacer) 0;
 }
 .hero-section__text h1 {
   width: -webkit-min-content;
@@ -1277,10 +1302,14 @@ footer {
 }
 .hero-section__pic {
   position: absolute;
-  top: var(--header-height);
+  top: 15vh;
   bottom: 0;
   right: var(--page-padding);
   pointer-events: none;
+}
+.hero-section__pic img {
+  height: 100%;
+  object-fit: contain;
 }
 
 .product-section {
@@ -1354,33 +1383,42 @@ footer {
 }
 .product__btn--play {
   background: url(../images/play.svg) no-repeat center;
+  background-size: contain;
 }
 @media (hover: hover) {
   .product__btn--play:hover {
     background: url(../images/play-hover.svg) no-repeat center;
+    background-size: contain;
   }
 }
 .product__btn--play:active {
   background: url(../images/play-active.svg) no-repeat center;
+  background-size: contain;
 }
 .product__btn--link {
   background: url(../images/product-link.svg) no-repeat center;
+  background-size: contain;
 }
 @media (hover: hover) {
   .product__btn--link:hover {
     background: url(../images/link-hover.svg) no-repeat center;
+    background-size: contain;
   }
 }
 .product__btn--link:active {
   background: url(../images/link-active.svg) no-repeat center;
+  background-size: contain;
 }
 
 .form-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-grow: 1;
   gap: 80px;
-  padding: var(--hero-spacer) 0;
+  height: 100%;
+  padding-top: var(--header-height);
   background: var(--second-color);
 }
 

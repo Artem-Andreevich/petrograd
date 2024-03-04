@@ -62,7 +62,7 @@
 	--size-30-25: 30px;
 
 	--wrapper-gap: 60px;
-	--page-padding: 240px;
+	--page-padding: clamp(240px, 15vw, 450px);
 	--header-height: 86px;
 	--hero-spacer: 184px;
 
@@ -145,6 +145,9 @@ main {
 	flex: 1 0 auto;
 }
 footer {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	flex: 0 0 auto;
 }
 
@@ -628,6 +631,7 @@ footer {
 
 
 
+
 .form {
 
 	max-width: 615px;
@@ -760,7 +764,6 @@ footer {
 }
 
 
-
 .header {
 
 	position: fixed;
@@ -780,7 +783,31 @@ footer {
 		display: flex;
 		align-items: center;
 	}
+
+	.logo img:last-child { display: none;}
+
+	&--white {
+
+		.logo img:first-child { display: none;}
+		.logo img:last-child { display: block;}
+
+		.main-nav__link {
+
+			color: #fff;
+
+			@media (hover :hover) {
+				&:hover {
+					color: var(--accent-color);
+					background: #fff;
+				}
+			}
+		}
+		
+		.burger { color: #fff;}
+	}
+
 }
+
 .main-nav {
 
 	&__link {
@@ -810,6 +837,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	width: 100%;
 	padding: 30px 0;
 
 	color: var(--second-light-color);
@@ -1041,8 +1069,11 @@ footer {
 	position: relative;
 	z-index: 1;
 	display: flex;
+	align-items: center;
+	height: 100%;
+
 	padding-top: var(--header-height);
-	padding-bottom: 30px;
+
 	background: var(--second-color);
 
 	&::after {
@@ -1065,7 +1096,6 @@ footer {
 		display: flex;
 		flex-direction: column;
 		align-items: start;
-		padding: calc(var(--hero-spacer) - var(--header-height)) 0 var(--hero-spacer) 0;
 
 		h1 {
 			width: min-content;
@@ -1082,17 +1112,18 @@ footer {
 	&__pic {
 
 		position: absolute;
-		top: var(--header-height);
+		top: 15vh;
 		bottom: 0;
 		right: var(--page-padding);
 		pointer-events: none;
+
+		img { height: 100%; object-fit: contain;}
 	}
 }
 
 .product-section {
 
 	position: relative;
-	// padding: var(--hero-spacer);
 	background: var(--accent-color);
 	overflow: hidden;
 
@@ -1166,23 +1197,25 @@ footer {
 		&--play {
 
 			background: url(../images/play.svg) no-repeat center;
+			background-size: contain;
 
 			@media (hover :hover) {
-				&:hover { background: url(../images/play-hover.svg) no-repeat center; }
+				&:hover { background: url(../images/play-hover.svg) no-repeat center; background-size: contain;}
 			}
 
-			&:active { background: url(../images/play-active.svg) no-repeat center; }
+			&:active { background: url(../images/play-active.svg) no-repeat center; background-size: contain;}
 		}
 
 		&--link {
 
 			background: url(../images/product-link.svg) no-repeat center;
+			background-size: contain;
 
 			@media (hover :hover) {
-				&:hover { background: url(../images/link-hover.svg) no-repeat center; }
+				&:hover { background: url(../images/link-hover.svg) no-repeat center; background-size: contain;}
 			}
 
-			&:active { background: url(../images/link-active.svg) no-repeat center; }
+			&:active { background: url(../images/link-active.svg) no-repeat center;  background-size: contain;}
 		}
 	}
 }
@@ -1191,13 +1224,15 @@ footer {
 
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
+	flex-grow: 1;
 	gap: 80px;
+	height: 100%;
 
-	padding: var(--hero-spacer) 0;
+	padding-top: var(--header-height);
 	background: var(--second-color);
 }
-
 
 
 .swiper {

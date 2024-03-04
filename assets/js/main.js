@@ -35,102 +35,86 @@ $(function (){
 
 
 
+
+
+
+	/* PRODUCT VIDEO PLAY */
+	const playButton = document.querySelector('.product__btn--play')
+	const prodVideo = document.querySelector('.product video')
+
+	playButton?.addEventListener('click', () => { prodVideo?.play() })
+	/* END PRODUCT VIDEO PLAY */
+
+
+
+
+	/* SWIPER INIT*/
 	const swiper = new Swiper('.my-swiper', {
-
 		direction: "vertical",
-		// direction: "horizontal",
-
-		// autoHeight: true,
-
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// 	clickable: true,
-		// },
-
-		mousewheel: {
-			enabled: true,
-			noMousewheelClass: true,
-		},
-
-	  });
-
-	  var swiper2 = new Swiper('.my-swiper2', {
-		direction: "vertical",
-		// direction: "horizontal",
-		// autoHeight: true,
-
-		// pagination: {
-		//   el: ".swiper-pagination",
-		//   clickable: true,
-		// },
-
+		speed: 600,
 		nested: true,
 
-		// effect: 'fade',
-		// fadeEffect: {
-		// 	crossFade: true
-		// },
-
 		mousewheel: {
 			enabled: true,
 			noMousewheelClass: true,
 		},
 
-	  });
+	});
+	  
+	var swiper2 = new Swiper('.my-swiper2', {
+		direction: "vertical",
+		speed: 600,
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+				translate: [0, "-125%", 0],
+				rotate: [0, 0, -90],
+			},
+			next: {
+				translate: [0, "125%", 0],
+				rotate: [0, 0, 90],
+			},
+		},
+		nested: true,
+		mousewheel: {
+			enabled: true,
+			noMousewheelClass: true,
+		},
+	});
+	/* END SWIPER INIT*/
+
+	
 
 
 
 
+	const productScreen = document.querySelector('.product-section')
 
-	// const textTl = gsap.timeline()
-	// textTl.to('.text-wrap p:first-child', {
-	// 	scrollTrigger: {
-	// 		scrub: 1,
-	// 		start: '+=100',
-	// 		end: '+=4500',
-	// 	},
-	// 	x: '+=1550'
-	// })
-	// textTl.to('.text-wrap p:last-child', {
-	// 	scrollTrigger: {
-	// 		scrub: 1,
-	// 		start: '+=100',
-	// 		end: '+=4500',
-	// 	},
-	// 	x: '-=1550'
-	// })
+	if(productScreen) {
 
+		const observeOptions = { 
+			threshold: [0.1], 
+			rootMargin: "100px", 
+		}
 
-	// const prodSection = gsap.timeline({
+		function isVsible( entries ) {
+			entries.forEach( entry => {
 
-	// 	scrollTrigger: {
-	// 		trigger: ".product-section",
-	// 		pin: true,
-	// 		start: "top top",
-	// 		scrub: 1,
-	// 		// onEnter: () => { console.log('enter')}
-	// 	}
-	// })
+				if(entry.isIntersecting) {
 
-	// prodSection.add(gsap.fromTo('.product-wrap', {
+					document.querySelector('header').classList.add('header--white')
+					prodVideo?.play()
 
-	// 	scrollTrigger: {
-	// 		trigger: ".product-section",
-	// 		pin: true,
-	// 		scrub: 1,
-	// 		start: "top center",
-	// 	},
+				} else {
+					document.querySelector('header').classList.remove('header--white')
+				}
+			});
+		}
 
-	// 	y: '300',
-	// 	rotate: '60'
-	// },
-	// {
-	// 	y: '0',
-	// 	rotate: '0'
-	// }
-	// ))
+		const observer = new IntersectionObserver(isVsible, observeOptions);
 
-
+		observer.observe(productScreen) 
+	}
 
 });
 

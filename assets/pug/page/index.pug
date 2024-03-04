@@ -2,15 +2,17 @@ extends ../layout/head.pug
 block content
     main.page
 
+        
+
         .swiper.my-swiper
             .swiper-wrapper
 
                 .swiper-slide
                     include ../block/hero-section.pug
 
-                .swiper-slide.swiper-no-mousewheel
+                .swiper-slide
 
-                        section.product-section.padding
+                        section.product-section
                             .text-wrap 
                                 p
                                     span Видео
@@ -25,42 +27,16 @@ block content
                                     span Видео
                                     span Видео
                             .swiper.my-swiper2
-                                .swiper-wrapper
+                                .swiper-wrapper.wrpa2
+
                                     .swiper-slide
-                                        //- .text-wrap 
-                                            p
-                                                span Видео
-                                                span Видео
-                                                span Видео
-                                                span Видео
-                                                span Видео
-                                            p
-                                                span Видео
-                                                span Видео
-                                                span Видео
-                                                span Видео
-                                                span Видео
                                         .product-wrap
                                             .product
-                                                video(src="images/Video.mp4") 
+                                                video(src="images/Video.mp4" muted="muted" ) 
                                                 .product__cta
                                                     button.product__btn.product__btn--play
 
                                     .swiper-slide
-                                        //- .text-wrap 
-                                            p
-                                                span Велосипед
-                                                span Велосипед
-                                                span Велосипед
-                                                span Велосипед
-                                                span Велосипед
-                                            p
-                                                span Велосипед
-                                                span Велосипед
-                                                span Велосипед
-                                                span Велосипед
-                                                span Велосипед
-                                                
                                         .product-wrap
                                             .product
                                                 img(src="images/product.jpg", alt="")
@@ -70,6 +46,5 @@ block content
                 .swiper-slide
                     include ../block/form-section.pug
 
-            //- .swiper-pagination
 
         

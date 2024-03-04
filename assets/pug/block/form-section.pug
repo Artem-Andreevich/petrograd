@@ -1,20 +1,24 @@
 include ../layout/mixins.pug
-section.form-section.padding
-    h2.page__subtitle Оставить заявку
-    form.form(action="")
-        fieldset 
-            input(type='text' placeholder='Ваше имя')
-            input.phone-mask(type="tel" autocomplete="tel"  placeholder='+7 ___-___-__-__' required)
-            span.error-message Поле обязетельно к заполнению
-        .form__cta
-            button.btn-main Отправить
-            label.page__checkbox
-                input(type="checkbox" required)
-                svg(width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg")
-                    rect(x="0.5" y="0.5" width="9" height="9" stroke="#192632")
-                    rect(x="3" y="3" width="4" height="4" fill="none")
-                p Нажимая на кнопку «Отправить» вы соглашаетесь с нашей&nbsp;
-                    a.hover-accent(href="#") политикой конфиденциальности
-        .succses-message.hidden
-            +svg('succses', 24)
-            p Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время
+
+footer
+    .form-section.padding
+        h2.page__subtitle Оставить заявку
+        form.form(action="")
+            fieldset 
+                input(type='text' placeholder='Ваше имя')
+                input.phone-mask(type="tel" autocomplete="tel"  placeholder='+7 ___-___-__-__' required)
+                span.error-message Поле обязетельно к заполнению
+            .form__cta
+                button.btn-main Отправить
+                label.page__checkbox
+                    input(type="checkbox" required)
+                    svg(width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        rect(x="0.5" y="0.5" width="9" height="9" stroke="#192632")
+                        rect(x="3" y="3" width="4" height="4" fill="none")
+                    p Нажимая на кнопку «Отправить» вы соглашаетесь с нашей&nbsp;
+                        a.hover-accent(href="#") политикой конфиденциальности
+            .succses-message.hidden
+                +svg('succses', 24)
+                p Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время
+    
+    include ../layout/footer.pug
