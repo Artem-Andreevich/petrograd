@@ -160,6 +160,10 @@ footer {
 	margin: 0 auto;
 	// gap: var(--wrapper-gap);
 }
+.icon {
+	stroke: currentColor;
+	&-fill { fill: currentColor; }
+}
 
 
 .header {
@@ -681,10 +685,12 @@ footer {
 
 		&__top {
 			top: 50vh;
+			left: 0;
 			transform: translateY(-100%);
 		}
 		&__bottom {
 			top: 50vh;
+			// right: 0;
 			transform: translateY(0%);
 		}
 

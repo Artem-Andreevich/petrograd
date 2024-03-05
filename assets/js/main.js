@@ -93,20 +93,6 @@ $(function (){
 		},
 
 	});
-
-	swiper2.on('slideChange', function(swiper) {
-
-		if ( swiper.slides[0].classList.contains('swiper-slide-visible') ) {
-
-			changeText(textFirst, "Видео")
-			changeText(textLast, "Видео")
-
-		} else {
-
-			changeText(textFirst, "Велосипед")
-			changeText(textLast, "Велосипед")
-		}
-	})
 	/* END SWIPER INIT*/
 
 	
@@ -120,8 +106,9 @@ $(function (){
 	const textLast = document.querySelector('.text-wrap__bottom p')
 	const textLastContent = textFirst.innerHTML 
 
+
 	function cloneText(text, content) {
-		while (windowWidth * 2 > text.offsetWidth) {
+		while (windowWidth * 3 > text.offsetWidth) {
 			text.insertAdjacentHTML('beforeend', `
 				${content}
 			`) 
@@ -133,13 +120,16 @@ $(function (){
 		cloneText(selector, `<span>${content}</span>`)
 	}
 
+
 	cloneText(textFirst, textFirstContent)
 	cloneText(textLast, textLastContent)
 
-	const textAnimRight =  anime({
+
+
+	const textAnimRight = anime({
 		targets: textFirst,
-		translateX: ['-36%', '-11%'],
-		duration: 1200,
+		translateX: ['0px', `-${ ((textFirst.children[0].offsetWidth + 40) * 2)}px`],
+		duration: 2200,
 		easing: 'linear',
 		autoplay: false,
 		complete: function(anim) {
@@ -147,15 +137,31 @@ $(function (){
 		}
 	})
 
-	const textAnimLeft =  anime({
+	const textAnimLeft = anime({
 		targets: textLast,
-		translateX: ['-11%', '-36%'],
-		duration: 1200,
+		translateX: [`-${ ((textLast.children[0].offsetWidth + 40) * 2)}px`, '0px'],
+		duration: 2200,
 		easing: 'linear',
 		autoplay: false,
 		complete: function(anim) {
 			anim.restart()
 		}
+	})
+
+
+	swiper2.on('slideChange', function(swiper) {
+
+		if ( swiper.slides[0].classList.contains('swiper-slide-visible') ) {
+
+			changeText(textFirst, "Видео")
+			changeText(textLast, "Видео")
+
+		} else {
+
+			changeText(textFirst, "Велосипед")
+			changeText(textLast, "Велосипед")
+		}
+
 	})
 	/* END TEXT ANIMATE */
 

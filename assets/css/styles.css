@@ -209,6 +209,13 @@ footer {
   margin: 0 auto;
 }
 
+.icon {
+  stroke: currentColor;
+}
+.icon-fill {
+  fill: currentColor;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -681,6 +688,7 @@ footer {
 }
 .product-section .text-wrap__top {
   top: 50vh;
+  left: 0;
   transform: translateY(-100%);
 }
 .product-section .text-wrap__bottom {
