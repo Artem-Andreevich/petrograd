@@ -186,7 +186,11 @@ footer {
 		align-items: center;
 	}
 
-	.logo img:last-child { display: none;}
+	.logo img{
+		
+		width: auto;
+		&:last-child { display: none;}
+	}
 
 	&--white {
 

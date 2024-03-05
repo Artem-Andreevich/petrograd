@@ -231,6 +231,9 @@ footer {
   display: flex;
   align-items: center;
 }
+.header .logo img {
+  width: auto;
+}
 .header .logo img:last-child {
   display: none;
 }
