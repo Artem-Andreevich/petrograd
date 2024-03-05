@@ -61,7 +61,6 @@ $(function (){
 		direction: "vertical",
 		speed: 600,
 		simulateTouch: false,
-		nested: true,
 
 		mousewheel: {
 			enabled: true,
