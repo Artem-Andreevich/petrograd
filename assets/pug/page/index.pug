@@ -2,32 +2,24 @@ extends ../layout/head.pug
 block content
     main.page
 
-        
-
         .swiper.my-swiper
             .swiper-wrapper
 
                 .swiper-slide
                     include ../block/hero-section.pug
 
-                .swiper-slide
+                .swiper-slide.swiper-no-mousewheel
 
                         section.product-section
-                            .text-wrap 
+                            .text-wrap.text-wrap__top
                                 p
                                     span Видео
-                                    span Видео
-                                    span Видео
-                                    span Видео
-                                    span Видео
+                            .text-wrap.text-wrap__bottom
                                 p
                                     span Видео
-                                    span Видео
-                                    span Видео
-                                    span Видео
-                                    span Видео
+                                    
                             .swiper.my-swiper2
-                                .swiper-wrapper.wrpa2
+                                .swiper-wrapper
 
                                     .swiper-slide
                                         .product-wrap

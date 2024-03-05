@@ -1,5 +1,12 @@
 $(function (){
 
+	/* GLOBAL CONST */
+	const windowWidth = window.innerWidth
+	/* END GLOBAL CONST */
+
+
+
+
 
 	/* FORM VALIDATION */
 	if (jQuery.fn.inputmask) {
@@ -48,12 +55,13 @@ $(function (){
 
 
 
+
 	/* SWIPER INIT*/
 	const swiper = new Swiper('.my-swiper', {
 		direction: "vertical",
 		speed: 600,
-		mousewheelControl: true,
 		simulateTouch: false,
+		nested: true,
 
 		mousewheel: {
 			enabled: true,
@@ -62,9 +70,10 @@ $(function (){
 
 	});
 	  
-	var swiper2 = new Swiper('.my-swiper2', {
+	const swiper2 = new Swiper('.my-swiper2', {
 		direction: "vertical",
 		speed: 600,
+
 		effect: "creative",
 		creativeEffect: {
 			prev: {
@@ -77,20 +86,85 @@ $(function (){
 			},
 		},
 		nested: true,
-		mousewheelControl: true,
 		simulateTouch: false,
+
 		mousewheel: {
 			enabled: true,
 			noMousewheelClass: true,
 		},
+
 	});
+
+	swiper2.on('slideChange', function(swiper) {
+
+		if ( swiper.slides[0].classList.contains('swiper-slide-visible') ) {
+
+			changeText(textFirst, "Видео")
+			changeText(textLast, "Видео")
+
+		} else {
+
+			changeText(textFirst, "Велосипед")
+			changeText(textLast, "Велосипед")
+		}
+	})
 	/* END SWIPER INIT*/
 
 	
 
 
 
+	/* TEXT ANIMATE */
 
+	const textFirst = document.querySelector('.text-wrap__top p')
+	const textFirstContent = textFirst.innerHTML 
+	const textLast = document.querySelector('.text-wrap__bottom p')
+	const textLastContent = textFirst.innerHTML 
+
+	function cloneText(text, content) {
+		while (windowWidth * 2 > text.offsetWidth) {
+			text.insertAdjacentHTML('beforeend', `
+				${content}
+			`) 
+		}
+	}
+
+	function changeText(selector, content){
+		selector.innerHTML = ""
+		cloneText(selector, `<span>${content}</span>`)
+	}
+
+	cloneText(textFirst, textFirstContent)
+	cloneText(textLast, textLastContent)
+
+	const textAnimRight =  anime({
+		targets: textFirst,
+		translateX: ['-36%', '-11%'],
+		duration: 1200,
+		easing: 'linear',
+		autoplay: false,
+		complete: function(anim) {
+			anim.restart()
+		}
+	})
+
+	const textAnimLeft =  anime({
+		targets: textLast,
+		translateX: ['-11%', '-36%'],
+		duration: 1200,
+		easing: 'linear',
+		autoplay: false,
+		complete: function(anim) {
+			anim.restart()
+		}
+	})
+	/* END TEXT ANIMATE */
+
+
+	
+
+
+	/* INTERSECTION OBSERVER */
 	const productScreen = document.querySelector('.product-section')
 
 	if(productScreen) {
@@ -109,6 +183,8 @@ $(function (){
 
 				if(entry.isIntersecting) {
 					document.querySelector('header').classList.add('header--white')
+					textAnimRight.play()
+					textAnimLeft.play()
 				} else {
 					document.querySelector('header').classList.remove('header--white')
 				}
@@ -119,6 +195,9 @@ $(function (){
 
 		observer.observe(productScreen) 
 	}
+	/* END INTERSECTION OBSERVER */
+
+
 
 });
 

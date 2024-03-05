@@ -97,13 +97,14 @@
   .product-section {
     padding: 0 var(--page-padding);
   }
-  .product-section .text-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(100% - var(--header-height));
-    transform: none;
-    top: var(--header-height);
+  .product-section .text-wrap__top {
+    top: calc(0px + var(--header-height));
+    transform: translate(0);
+    line-height: 100%;
+  }
+  .product-section .text-wrap__bottom {
+    top: inherit;
+    bottom: 0;
     line-height: 100%;
   }
   .product {
@@ -155,9 +156,6 @@
   }
   .form-section {
     gap: 40px;
-  }
-  .form-section .page__subtitle {
-    text-align: center;
   }
 }
 @media (max-width: 576px) and (min-width: 0px) {

@@ -12,23 +12,15 @@ html(lang="ru")
         link(href='css/media.min.css', rel='stylesheet')
         link(rel="icon" href="fic.svg" type="image/svg+xml")
         title #{title}
-        
         script(src='js/jquery.min.js')
         script(src='js/jquery.inputmask.bundle.min.js')
         script(src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
-        //- script(src='js/gsap/gsap.min.js')
-        //- script(src='js/gsap/ScrollTrigger.min.js')
         script(src='js/anime.min.js')
-
         script(src='js/main.js')
     body.inner-page
         include svg.pug
-        block modal
-        include ../block/backdrop.pug
-        include ../block/menu-offcanvas.pug
         .wrapper 
             block header
                 include header.pug
             block content 
             block footer
-                //- include footer.pug
